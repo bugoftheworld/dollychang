@@ -2,19 +2,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,8 +92,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -33,16 +110,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
@@ -50,6 +131,18 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local("Noto Sans TC"), url("https://fonts.googleapis.com/css?family=Noto+Sans");
+  unicode-range: U+4E00-9FFF;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: local(Helvetica), local("Arial");
+  unicode-range: U+00-024F;
 }
 
 .header {
@@ -74,6 +167,12 @@ table {
 }
 
 .header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -87,6 +186,34 @@ table {
 @media only screen and (max-width: 768px) {
   .header .logo img {
     height: 1.5em;
+  }
+}
+
+.header .linkLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.header .linkLogo img {
+  width: 40px;
+  padding-right: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .header .linkLogo img {
+    width: 35px;
+    padding-right: 0.5em;
   }
 }
 
@@ -247,8 +374,20 @@ table {
   font-weight: 600;
 }
 
+@media only screen and (max-width: 480px) {
+  .content .part .title {
+    font-size: 0.9em;
+  }
+}
+
 .content .part .title img {
   height: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+  .content .part .title img {
+    height: 35px;
+  }
 }
 
 .content .part .title span {
@@ -288,18 +427,6 @@ table {
 @media only screen and (max-width: 480px) {
   .footer {
     font-size: 0.8em;
-  }
-}
-
-.footer .linkLogo {
-  width: 100%;
-  float: left;
-  margin: 2em 0;
-}
-
-@media only screen and (max-width: 480px) {
-  .footer .linkLogo img {
-    width: 40px;
   }
 }
 /*# sourceMappingURL=profolio.css.map */
